@@ -1,6 +1,35 @@
-# Tachyon PedidosYa Integration Server
+# Tachyon PedidosYa Integration - Testing Repository
 
-Servidor Node.js para integración con PedidosYa usando Server-Sent Events (SSE) para comunicación en tiempo real con el sistema PHP de Tachyon.
+> **⚠️ PROYECTO CONGELADO** - Ver [`README-ESTADO-PROYECTO.md`](./README-ESTADO-PROYECTO.md) para estado completo  
+> **📅 Fecha**: 19 de Agosto 2025
+
+Repositorio de desarrollo y testing para la integración con PedidosYa. Contiene simuladores, documentación y herramientas de prueba para el servidor de producción alojado en Railway.
+
+## 📁 Estructura del Proyecto
+
+```
+test-pedidosya-sse/
+├── docs/                           # 📚 Documentación
+│   ├── api/                        # Especificaciones API YAML
+│   │   ├── middlewareExternalApi.yaml
+│   │   └── pluginApi.yaml
+│   ├── html/                       # Páginas guardadas de documentación
+│   │   ├── Delivery Hero - POS Middleware API.html
+│   │   ├── Delivery Hero - POS Plugin API.html
+│   │   └── ...archivos_de_soporte/
+│   └── images/                     # Capturas e imágenes de referencia
+├── simulators/                     # 🔧 Simuladores y herramientas de testing
+│   ├── cliente-sse.js              # Cliente SSE para pruebas
+│   ├── simulador-completo.js       # Simulador completo con UI
+│   ├── simulador-railway.js        # Simulador para Railway
+│   ├── simulador.js                # Simulador básico
+│   └── test-simulator.js           # Testing automatizado
+├── src/                           # 🚀 Código fuente de desarrollo
+│   ├── server.js                   # Servidor de desarrollo
+│   └── config.js                   # Configuración del proyecto
+├── package.json
+└── README.md
+```
 
 ## 🏗️ Arquitectura
 
@@ -8,10 +37,14 @@ Servidor Node.js para integración con PedidosYa usando Server-Sent Events (SSE)
 PedidosYa → Railway (Node.js) → SSE → PHP Tachyon
 ```
 
-1. **PedidosYa** envía webhooks al servidor
-2. **Servidor Node.js** recibe y procesa los webhooks
+1. **PedidosYa** envía webhooks al servidor de producción
+2. **Servidor Railway** recibe y procesa los webhooks  
 3. **SSE** envía eventos en tiempo real al cliente PHP
 4. **PHP Tachyon** procesa los pedidos en tiempo real
+
+## 🎯 Propósito de este Repositorio
+
+Este repositorio es para **desarrollo y testing**. El servidor de producción está en el repositorio `TestPEdidosYa` y deployado en Railway.
 
 ## 🚀 Endpoints Implementados
 

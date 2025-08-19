@@ -1,11 +1,16 @@
 {
-  "name": "tachyon-railway-webhook",
+  "name": "tachyon-pedidosya-testing",
   "version": "1.0.0",
-  "description": "Servidor SSE para webhooks de Tachyon",
-  "main": "server.js",
+  "description": "Repositorio de testing y desarrollo para integración PedidosYa",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test:simulator": "node simulators/test-simulator.js",
+    "test:sse": "node simulators/cliente-sse.js",
+    "simulator": "node simulators/simulador.js",
+    "simulator:complete": "node simulators/simulador-completo.js",
+    "simulator:railway": "node simulators/simulador-railway.js"
   },
   "dependencies": {
     "axios": "^1.11.0",
